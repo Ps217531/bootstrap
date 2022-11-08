@@ -1,10 +1,10 @@
 @extends('twill::layouts.form', [
     'additionalFieldsets' => [
-        ['fieldset' => 'feature', 'label' => 'Feature'],
-        ['fieldset' => 'testimonial', 'label' => 'Testimonial'],
-        ['fieldset' => 'preview', 'label' => 'Preview'],
+        ['fieldset' => 'header', 'label' => 'Header'],
+        ['fieldset' => 'about', 'label' => 'Header'],
+        ['fieldset' => 'about2', 'label' => 'About2'],
+        ['fieldset' => 'team', 'label' => 'Team'],
         ['fieldset' => 'footer', 'label' => 'Footer'],
-        ['fieldset' => 'call_to_action', 'label' => 'Call to action'],
      
         
     ]
@@ -25,39 +25,39 @@
 
 @section('fieldsets')
 
-    @formFieldset(['id' => 'feature', 'title' => 'Feature', 'open' => false])
+    @formFieldset(['id' => 'header', 'title' => 'Header', 'open' => false])
     @formField('block_editor', [
-        'name' => 'feature',
-        'label' => 'Feature', 
-        'title' => 'Feature',
+        'name' => 'header',
+        'label' => 'Header', 
+        'title' => 'Header',
         'blocks' => ['paragraph','image','paragraph_image']
       ])
     @endformFieldset
     
-    @formFieldset(['id' => 'testimonial', 'title' => 'Testimonial', 'open' => false])
+    @formFieldset(['id' => 'about', 'title' => 'About', 'open' => false])
    
       @formField('block_editor', [
           'name' => 'testimonial',
-          'label' => 'Testimonial', 
-          'title' => 'Testimonial',
+          'label' => 'About', 
+          'title' => 'About',
           'blocks' => ['paragraph','image','paragraph_image']
         ])
       @endformFieldset
 
-    @formFieldset(['id' => 'preview', 'title' => 'Preview', 'open' => false])
+    @formFieldset(['id' => 'about', 'title' => 'About2', 'open' => false])
       @formField('block_editor', [
-          'name' => 'preview',
-          'label' => 'Preview', 
-          'title' => 'Preview',
+          'name' => 'about',
+          'label' => 'About2', 
+          'title' => 'About2',
           'blocks' => ['paragraph','image','paragraph_image']
         ])
       @endformFieldset  
 
-    @formFieldset(['id' => 'call_to_action', 'title' => 'Call to action', 'open' => false])
+    @formFieldset(['id' => 'team', 'title' => 'Team', 'open' => false])
       @formField('block_editor', [
-          'name' => 'call_to_action',
-          'label' => 'Call to action', 
-          'title' => 'Call to action',
+          'name' => 'team',
+          'label' => 'Call to Team', 
+          'title' => 'Call to Team',
           'blocks' => ['paragraph','image','paragraph_image']
         ])
       @endformFieldset
