@@ -59,6 +59,11 @@ return [
                 'icon' => 'button',
                 'component' => 'a17-block-button'
             ],
+            'form' => [
+                'title' => 'Form',
+                'icon' => 'form',
+                'component' => 'a17-block-form'
+            ],
             // 'image_paragraph' => [
             //     'title' => 'Image & Paragraph',
             //     'icon' => 'text-image',

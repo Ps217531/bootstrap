@@ -1,8 +1,16 @@
 @php
+$align = $block->input('alignment');
+$size = $block->input('size');
+$color = $block->input('color');
+$outline = $block->input('outline');
+
+
+$width = $block->input('width');
 @endphp
 
-<section>
+<section class="{{$width}}">
     <figure class="{{$align}}">
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<input class="{{$color}} {{$outline}} {{$size}}" type="button" value="{!!$block->input('text')!!}">
+</input>
     </figure>
 </section>

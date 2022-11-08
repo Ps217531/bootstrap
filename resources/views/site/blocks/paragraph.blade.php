@@ -19,6 +19,7 @@
 
     <p>{!!$block->input('paragraph')!!}</p>
 
+
 </figure>
 
 </section>

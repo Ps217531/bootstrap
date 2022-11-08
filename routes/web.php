@@ -27,6 +27,7 @@ Route::get('/', function () {
 
     Route::get('abouts/{slug}', [ContentController::class, 'about']);
 
+    Route::get('contacts/{slug}', [ContentController::class, 'contact']);
 
 
 
