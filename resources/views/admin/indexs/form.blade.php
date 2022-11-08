@@ -16,39 +16,7 @@
         'label' => 'Description',
         'maxlength' => 100
     ])
-    @formField('input', [
-        'name' => 'header_title',
-        'label' => 'Header Title',
-        'maxlength' => 100
-    ])
-    @formField('input', [
-        'name' => 'header_description',
-        'label' => 'Header Description',
-        'maxlength' => 100
-    ])
-    @formField('medias', [
-        'name' => 'cover',
-        'label' => 'Header Image',
-        'note' => 'Recommended size: 1920x1080',
-        'max' => 1
-    ])
-    @formField('input', [
-        'name' => 'feature_title',
-        'label' => 'Feature Title',
-        'maxlength' => 100
-    ])
-    @formField('input', [
-        'name' => 'feature_description',
-        'label' => 'Feature Description',
-        'maxlength' => 100
-    ])
-    @formField('medias', [
-        'name' => 'feature_image',
-        'label' => 'Feature Image',
-        'note' => 'Recommended size: 1920x1080',
-        'max' => 1,
-    ])
-
+    
 @stop
 
 
@@ -61,7 +29,7 @@
         'name' => 'feature',
         'label' => 'Feature', 
         'title' => 'Feature',
-        'blocks' => ['paragraph','image','paragraph_image']
+        'blocks' => ['paragraph','image','paragraph_image', 'button']
       ])
     @endformFieldset
     

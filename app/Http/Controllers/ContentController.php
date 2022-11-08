@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\IndexRepository;
-
+use App\Repositories\AboutRepository;
 class ContentController extends Controller
 {
     public function __construct(IndexRepository $repository)
@@ -19,4 +19,16 @@ class ContentController extends Controller
 
         return view('content.index', compact('content'));
     }
+
+
+
+
+    public function about($slug, AboutRepository $repository)
+    {
+        $content = $repository->forslug($slug);
+        abort_unless($content, 404, 'content');
+
+        return view('content.about', compact('content'));
+    }
+   
 }

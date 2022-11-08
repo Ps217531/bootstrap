@@ -1,7 +1,7 @@
 @extends('twill::layouts.form', [
     'additionalFieldsets' => [
         ['fieldset' => 'header', 'label' => 'Header'],
-        ['fieldset' => 'about', 'label' => 'Header'],
+        ['fieldset' => 'about', 'label' => 'About'],
         ['fieldset' => 'about2', 'label' => 'About2'],
         ['fieldset' => 'team', 'label' => 'Team'],
         ['fieldset' => 'footer', 'label' => 'Footer'],
@@ -36,17 +36,32 @@
     
     @formFieldset(['id' => 'about', 'title' => 'About', 'open' => false])
    
+    @formField('medias', [
+        'name' => 'cover',
+        'label' => 'About Image',
+        'note' => 'Recommended size: 600x400',
+        'max' => 1
+    ])
+
       @formField('block_editor', [
-          'name' => 'testimonial',
+          'name' => 'about',
           'label' => 'About', 
           'title' => 'About',
           'blocks' => ['paragraph','image','paragraph_image']
         ])
       @endformFieldset
 
-    @formFieldset(['id' => 'about', 'title' => 'About2', 'open' => false])
+    @formFieldset(['id' => 'abouttwo', 'title' => 'About2', 'open' => false])
+
+    @formField('medias', [
+        'name' => 'variable_image',
+        'label' => 'About Image2',
+        'note' => 'Recommended size: 600x400',
+        'max' => 1
+    ])
+
       @formField('block_editor', [
-          'name' => 'about',
+          'name' => 'about2',
           'label' => 'About2', 
           'title' => 'About2',
           'blocks' => ['paragraph','image','paragraph_image']
@@ -56,8 +71,8 @@
     @formFieldset(['id' => 'team', 'title' => 'Team', 'open' => false])
       @formField('block_editor', [
           'name' => 'team',
-          'label' => 'Call to Team', 
-          'title' => 'Call to Team',
+          'label' => 'team', 
+          'title' => 'team',
           'blocks' => ['paragraph','image','paragraph_image']
         ])
       @endformFieldset
